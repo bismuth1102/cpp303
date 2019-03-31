@@ -16,6 +16,6 @@ We focus on thread pool and concurrent database in this project. In project 1, w
 Since the operations on database is concurrent, when we use command `ALL`(get all usernames) and `SAV`(persist), we need two-phase locking in order to avoid other threads change any data while travesing and persisting. We also avoid dead locks because each two-phase locking is from the first class in the vector to the last one, no circle will generate.
 
 ### p3
-In project 2, since `SAV` needs two-phase locking, we cannot persist after operation. This will cause a problem that if we have already changed the data a lot but not `SAV` yet, the computer crashes, all the data changes disappear. So after each operation we did, we write a log into the persist file. If computer crashes before `SAV`, server can generate the data structure base on the log.
+In project 2, since `SAV` needs two-phase locking, we cannot persist after each operation. This will cause a problem that if we have already changed the data a lot but not `SAV` yet, the computer crashes, all the data changes disappear. So we record after each operation. If computer crashes before `SAV`, server can generate the data structure based on the log.
 
 
