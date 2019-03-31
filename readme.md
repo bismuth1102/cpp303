@@ -1,6 +1,6 @@
 **c++ project of a concurrent database.**
 
-**p1**
+**p1**<br>
 Server generates rsa keys(public and private). There are two kinds of format that the clients transmit. First is for KEY and BYE: KEY/n or BYE/n. Second format is four lines as below, all of the lines are concatenate with "/n":
 1. The encrypted aes key (by public key)
 2. The encrypted command (by aes bey)
@@ -11,5 +11,6 @@ When server trying to decrypt the message, it should first use its private key t
 At last, server will persist the data in a file.<br>
 
 **p2**<br>
+
 
 
