@@ -1,0 +1,1 @@
+make the outer vector hold the pointer to a class
