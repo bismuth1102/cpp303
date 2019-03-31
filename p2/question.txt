@@ -1,0 +1,5 @@
+Whenever a new connection arrives, the server should put the corresponding file descriptor into a shared queue.  Threads in the pool should use condition variables to wait until there is an element in the queue, at which time they can extract it and serve the corresponding client.
+
+Note that your thread pool will need to handle the `BYE` command very carefully.
+
+can we store pointer parameter?
