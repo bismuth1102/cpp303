@@ -1,4 +1,4 @@
-**c++ project of a concurrent database.**<br><br>
+**c++ project of a concurrent database.**<br>
 
 **p1**<br>
 Server generates rsa keys(public and private). There are two kinds of format that the clients transmit. First is for KEY and BYE: KEY/n or BYE/n. Second format is four lines as below, all of the lines are concatenate with "/n":
